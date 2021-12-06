@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="persist/EclipseLink">
+  <database-model serializer="dbm" dbms="ORACLE" family-id="ORACLE" format-version="4.19">
+    <root id="1">
+      <ServerVersion>18.0.0.0.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="ANONYMOUS">
+      <ObjectId>62</ObjectId>
+    </schema>
+    <schema id="3" parent="1" name="APPQOSSYS">
+      <ObjectId>54</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="AUDSYS">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="CTXSYS">
+      <ObjectId>82</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="DBSFWUSER">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DBSNMP">
+      <ObjectId>53</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="DIP">
+      <ObjectId>23</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DVF">
+      <ObjectId>98</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="DVSYS">
+      <ObjectId>1279990</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="GGSYS">
+      <ObjectId>59</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="GSMADMIN_INTERNAL">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="GSMCATUSER">
+      <ObjectId>58</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="GSMUSER">
+      <ObjectId>22</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="LBACSYS">
+      <ObjectId>96</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="MDDATA">
+      <ObjectId>94</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="MDSYS">
+      <ObjectId>88</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="OJVMSYS">
+      <ObjectId>80</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="OLAPSYS">
+      <ObjectId>91</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="ORACLE_OCM">
+      <ObjectId>39</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="ORDDATA">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="ORDPLUGINS">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="ORDSYS">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="OUTLN">
+      <ObjectId>13</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+      <CreatedTimestamp>2019-02-04.07:45:23</CreatedTimestamp>
+      <ModifiedTimestamp>2021-11-24.21:04:51</ModifiedTimestamp>
+      <IntrospectionTimestamp>2021-12-06.16:32:26</IntrospectionTimestamp>
+      <DbLinksHash>587392122</DbLinksHash>
+    </schema>
+    <schema id="26" parent="1" name="REMOTE_SCHEDULER_AGENT">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="SYS$UMF">
+      <ObjectId>46</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="SYSBACKUP">
+      <ObjectId>2147483617</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="SYSDG">
+      <ObjectId>2147483618</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="SYSKM">
+      <ObjectId>2147483619</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="SYSRAC">
+      <ObjectId>2147483620</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="SYSTEM">
+      <ObjectId>9</ObjectId>
+      <CreatedTimestamp>2019-02-04.07:46:01</CreatedTimestamp>
+      <ModifiedTimestamp>2021-11-25.11:16:43</ModifiedTimestamp>
+      <IntrospectionTimestamp>2021-12-06.16:32:27</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="35" parent="1" name="WMSYS">
+      <ObjectId>71</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="XDB">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+  </database-model>
+</dataSource>

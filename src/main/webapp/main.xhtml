@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="templates/page.xhtml">
+    <ui:define name="header">
+        <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
+    </ui:define>
+    <ui:define name="main-table">
+        <div class="table-main-env">
+        <table class = "table-main" id = "main_table">
+            <thead>
+            <tr>
+                <th>Введите значения или нажмите на рисунок</th>
+                <th>Таблица попаданий в область</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class = "table-main-section_input">
+                    <ui:include src="templates/graph.html"/>
+                    <br/>
+                    <h:form id="input-form">
+                    <div class="div-field">
+                    <fieldset class="input-X">
+                        <h:outputLabel for="xValue" value="Выберите X, допустимые значения от (-5;5)"/>
+                        <p:spinner id="xValue" name="x" stepFactor="1" required="true" max="5" min="-5" onchange="spinnerChange()">
+                            <f:validateRequired/>
+                            <f:validateLongRange minimum="-5" maximum="5"/>
+                        </p:spinner>
+                        <h:inputHidden id="true-x" value="#{resultBean.currentResult.x}">
+                            <f:validateRequired/>
+                            <f:validateLongRange minimum="-5" maximum="5"/>
+                        </h:inputHidden>
+                    </fieldset>
+                    </div>
+                    <div class="div-field">
+                    <fieldset class="input-Y">
+                        <h:outputLabel for="yValue" value="Выберите Y, допустимые значения от (-3;3)"/>
+                        <br/>
+                        <h:inputText maxlength="10" type="text" id="yValue" name="y" onchange="textChanged()">
+                            <f:validateRequired/>
+                            <f:validateDoubleRange minimum="-3" maximum="3"/>
+                        </h:inputText>
+                        <h:inputHidden id="true-y" value="#{resultBean.currentResult.y}">
+                            <f:validateRequired/>
+                            <f:validateDoubleRange minimum="-3" maximum="3"/>
+                        </h:inputHidden>
+                        <br/>
+                        <p class="invalidData_label" id="messageY"/>
+                    </fieldset>
+                    </div>
+                    <div class="div-field">
+                        <fieldset class="input-R">
+                            <h:outputLabel value="Выберите R, допустимые значение ниже"/>
+                            <p:commandLink type="button" value="1"  class="r-button" onclick="buttonClick(1, this)"/>
+                            <p:commandLink type="button" value="1.5" class="r-button" onclick="buttonClick(1.5, this)"/>
+                            <p:commandLink type="button" value="2" class="r-button" onclick="buttonClick(2, this)"/>
+                            <p:commandLink type="button" value="2.5" class="r-button" onclick="buttonClick(2.5, this)"/>
+                            <p:commandLink type="button" value="3" class="r-button" onclick="buttonClick(3, this)"/>
+                            <h:inputHidden value="#{resultBean.currentResult.r}" id="true-r">
+                                <f:validateRequired/>
+                                <f:validateLongRange minimum="1" maximum="3"/>
+                            </h:inputHidden>
+                            <br/>
+                            <p class="invalidData_label" id="messageR"/>
+                        </fieldset>
+                    </div>
+                    <div class="div-field">
+                        <fieldset class="set">
+                            <p:commandButton id="submitData"
+                                             class="set-button"
+                                             value="Отправить"
+                                             action="#{resultBean.addEntry}"
+                                             update=":wrapper">
+
+                                <f:ajax execute="input-form" render="panel"/>
+                            </p:commandButton>
+                        </fieldset>
+                    </div>
+                    </h:form>
+                    <h:form>
+                    <div class="div-field">
+                        <fieldset class="set">
+                            <p:commandButton id="clear"
+                                             class="set-button"
+                                             value="Очистить"
+                                             action="#{resultBean.clearEntries}"
+                                             update=":wrapper"
+                                             onclick="resetChanges()">
+                            </p:commandButton>
+                        </fieldset>
+                    </div>
+                    </h:form>
+                </td>
+
+                <td class = "table-main-section_output">
+                    <h:panelGroup id="wrapper" layout="block">
+                        <h:dataTable id="result-table" class="result-table" value="#{resultBean.entryBeansContainer}" var="result"
+                                     width="100%">
+                            <h:column>
+                                <f:facet name="header">X</f:facet>
+                                <h:outputText value="#{result.x}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Y</f:facet>
+                                <h:outputText value="#{result.y}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">R</f:facet>
+                                <h:outputText value="#{result.r}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Время</f:facet>
+                                <h:outputText value="#{result.currentTime}"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Попадание</f:facet>
+                                <h:outputText value="#{result.hit}"/>
+                            </h:column>
+                        </h:dataTable>
+                    </h:panelGroup>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <h:outputScript library="js" name="main.js"/>
+    </ui:define>
+    <ui:define name="link">
+        <div class="link">
+            <h:link value="Переход обратно" outcome="moveBack"/>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

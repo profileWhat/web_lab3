@@ -1,0 +1,142 @@
+.table-main {
+    vertical-align: top;
+    width: 100%;
+    border: 4px outset #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+    padding: 10px;
+    color: #AEAFAF;
+}
+
+#main_table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+.table-main-section_input {
+    width: 40%;
+    padding: 10px;
+    border: 2px #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+.input_label {
+    font-size: x-large;
+}
+
+.table-main-section_output {
+    width: 60%;
+    border: 2px #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+
+#outputTable th {
+    background-color: #AEAFAF;
+    color: black;
+    border: 2px outset #AEAFAF;
+}
+#outputTable td {
+    color: black;
+    border: 2px double #AEAFAF;
+}
+#outputTable *{
+    padding: 25px;
+    font-size:x-large;
+}
+#outputTable {
+    margin-left: 50px;
+    width: 90%;
+}
+
+.table-main-env {
+    display: flex;
+    width: 100%;
+}
+
+.div-field {
+    margin: 5px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-X {
+    width: 100%;
+    border: 1px  #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+
+.input-Y {
+    width: 100%;
+    border: 1px  #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+
+.input-R {
+    width: 100%;
+    border: 1px  #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+
+.r-button {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    border: 4px outset #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #AEAFAF;
+    text-align: center;
+    margin:1px;
+}
+
+.set-button {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    border: 4px outset #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #AEAFAF;
+    text-align: center;
+    margin:1px;
+}
+
+.set {
+    width: 100%;
+    border: 1px  #AEAFAF;
+    box-shadow: 0 0 15px #AEAFAF;
+}
+
+.invalidData_label {
+    font-size: x-large;
+    color: red;
+}
+
+.pointer {
+    fill: #cca484;
+    stroke: #5b504f;
+    stroke-width: 1;
+}
+
+.result-table {
+    border: 2px solid #AEAFAF;
+    background-color: #AEAFAF;
+    table-layout: fixed;
+    color: #0B1826;
+}
+
+.result-table tr {
+    text-align: center;
+    font-size:x-large;
+    border: 2px solid #AEAFAF;
+    background-color: #AEAFAF;
+}
+
+.result-table tr:nth-child(2n-1) {
+    text-align: center;
+    font-size:x-large;
+    background-color: #AEAFAF;
+}
